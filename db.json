@@ -27,7 +27,7 @@
     {
       "id": 5,
       "name": "Rex",
-      "image": "https://static.wikia.nocookie.net/pixar/images/a/a8/Rex_%28Toy_Story%29.png/revision/latest/scale-to-width-down/377?cb=20210221010941",
+      "image": "https://www.funstra.com/pub/media/catalog/product/cache/6d2cd582cc258e30f6be4c5631eaa487/t/o/toy-story-rex-figure.jpg",
       "likes": 1
     },
     {
@@ -47,6 +47,12 @@
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
       "likes": -2
+    },
+    {
+      "name": "Barbie",
+      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6545/6545068_sd.jpg;maxHeight=640;maxWidth=550",
+      "likes": 0,
+      "id": 9
     }
   ]
 }
