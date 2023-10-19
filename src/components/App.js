@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import Header from "./Header";
 import ToyForm from "./ToyForm";
 import ToyContainer from "./ToyContainer";
@@ -14,13 +13,17 @@ function App() {
     .then(toys => setToys(toys))
   }, [])
 
-  function handleClick() {
+  function handleClickShowForm() {
     setShowForm((showForm) => !showForm);
   }
 
   function handleAddToy(newToy) {
     setToys([...toys, newToy])
-    console.log(newToy)
+  }
+
+  function handleDeleteToy(deletedToy) {
+    const updatedToys = toys.filter(toy => toy.id !== deletedToy.id)
+    setToys(updatedToys)
   }
 
   return (
@@ -28,9 +31,9 @@ function App() {
       <Header />
       {showForm ? <ToyForm onAddToy={handleAddToy}/> : null}
       <div className="buttonContainer">
-        <button onClick={handleClick}>Add a Toy</button>
+        <button onClick={handleClickShowForm}>Add a Toy</button>
       </div>
-      <ToyContainer toys={toys}/>
+      <ToyContainer toys={toys} onDeleteToy={handleDeleteToy} />
     </>
   );
 }
